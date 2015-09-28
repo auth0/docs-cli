@@ -71,17 +71,7 @@ module.exports = function (grunt) {
     },
     exec: {
       'uglify': {
-        cmd: node_bin('uglifyjs') + ' build/auth0-ab.js  -b beautify=false,ascii_only=true > build/auth0-ab.min.js',
-        stdout: true,
-        stderr: true
-      },
-      'uglify-loader': {
-        cmd: node_bin('uglifyjs') + ' build/auth0-ab-loader.js  -b beautify=false,ascii_only=true > build/auth0-ab-loader.min.js',
-        stdout: true,
-        stderr: true
-      },
-      'test-inception': {
-        cmd: node_bin('mocha') + ' ./test/support/characters-inception.test.js',
+        cmd: node_bin('uglifyjs') + ' build/docs-cli.js  -b beautify=false,ascii_only=true > build/auth0-ab.min.js',
         stdout: true,
         stderr: true
       },
@@ -134,18 +124,18 @@ module.exports = function (grunt) {
       },
       clean: {
         files: [
-          { action: 'delete', dest: 'js/ab/ab-' + pkg.version + '.js' },
-          { action: 'delete', dest: 'js/ab/ab-' + pkg.version + '.min.js' },
-          { action: 'delete', dest: 'js/ab/ab-' + major_version + '.js' },
-          { action: 'delete', dest: 'js/ab/ab-' + major_version + '.min.js' },
-          { action: 'delete', dest: 'js/ab/ab-' + minor_version + '.js' },
-          { action: 'delete', dest: 'js/ab/ab-' + minor_version + '.min.js' },
-          { action: 'delete', dest: 'js/ab/ab-loader-' + pkg.version + '.min.js' },
-          { action: 'delete', dest: 'js/ab/ab-loader-' + major_version + '.min.js' },
-          { action: 'delete', dest: 'js/ab/ab-loader-' + minor_version + '.min.js' },
-          { action: 'delete', dest: 'js/ab/ab-loader-' + pkg.version + '.js' },
-          { action: 'delete', dest: 'js/ab/ab-loader-' + major_version + '.js' },
-          { action: 'delete', dest: 'js/ab/ab-loader-' + minor_version + '.js' }
+          { action: 'delete', dest: 'js/docs-cli/docs-cli-' + pkg.version + '.js' },
+          { action: 'delete', dest: 'js/docs-cli/docs-cli' + pkg.version + '.min.js' },
+          { action: 'delete', dest: 'js/docs-cli/docs-cli' + major_version + '.js' },
+          { action: 'delete', dest: 'js/docs-cli/docs-cli' + major_version + '.min.js' },
+          { action: 'delete', dest: 'js/docs-cli/docs-cli' + minor_version + '.js' },
+          { action: 'delete', dest: 'js/docs-cli/docs-cli' + minor_version + '.min.js' },
+          { action: 'delete', dest: 'js/docs-cli/docs-cli-loader-' + pkg.version + '.min.js' },
+          { action: 'delete', dest: 'js/docs-cli/docs-cli-loader-' + major_version + '.min.js' },
+          { action: 'delete', dest: 'js/docs-cli/docs-cli-loader-' + minor_version + '.min.js' },
+          { action: 'delete', dest: 'js/docs-cli/docs-cli-loader-' + pkg.version + '.js' },
+          { action: 'delete', dest: 'js/docs-cli/docs-cli-loader-' + major_version + '.js' },
+          { action: 'delete', dest: 'js/docs-cli/docs-cli-loader-' + minor_version + '.js' }
         ]
       },
       publish: {
@@ -232,16 +222,6 @@ module.exports = function (grunt) {
           method: 'DELETE'
         }
       }
-    },
-    jsdoc: {
-      dist : {
-        src: ['lib/**/*.js'],
-        options: {
-          destination: 'build',
-          template : 'support/loader',
-          query: 'majorFileName=ab-' + major_version
-        }
-      }
     }
   });
 
@@ -250,8 +230,8 @@ module.exports = function (grunt) {
     if (key !== 'grunt' && key.indexOf('grunt') === 0) { grunt.loadNpmTasks(key); }
   }
 
-  grunt.registerTask('uglify',        ['exec:uglify', 'exec:uglify-loader']);
-  grunt.registerTask('js',            ['clean:js', 'browserify:debug', 'jsdoc']);
+  grunt.registerTask('uglify',        ['exec:uglify']);
+  grunt.registerTask('js',            ['clean:js', 'browserify:debug']);
   grunt.registerTask('build',         ['js', 'uglify']);
 
   grunt.registerTask('dev',           ['connect:test', 'build', 'watch']);

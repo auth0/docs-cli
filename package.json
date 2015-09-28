@@ -19,8 +19,9 @@
   "license": "MIT",
   "dependencies": {
     "bluebird": "^2.9.34",
-    "flat": "^1.6.0",
-    "lodash": "^3.10.0"
+    "lodash": "^3.10.0",
+    "superagent": "^1.4.0",
+    "superagent-cache": "^1.0.2"
   },
   "devDependencies": {
     "browserify": "^8.1.1",
@@ -45,10 +46,12 @@
     "phantomjs": "^1.9.7-15",
     "rimraf": "~2.2.2",
     "sinon": "^1.16.0",
+    "through": "^2.3.8",
     "uglify-js": "~2.4.15",
     "unreleased": "^0.0.5",
     "zuul": "^3.3.0",
-    "zuul-ngrok": "~3.0.0"
+    "zuul-ngrok": "~3.0.0",
+    "jquery": "^2.1.4"
   },
   "browserify": {
     "transform": [

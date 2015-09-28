@@ -1,1 +1,1 @@
-module.exports = require('./lib/auth0_ab');
+module.exports = require('./lib/docs_api');

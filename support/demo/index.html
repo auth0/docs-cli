@@ -32,41 +32,63 @@
 
     <div class="container">
       <div class="sub-header sub-header-dropdown">
-        <span class="sub-header-text">Auth0AB demo page</span>
+        <span class="sub-header-text">Docs API demo page</span>
 
       </div>
     </div>
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
-          <div class="sidebar-box">
-            <strong>Basic demos</strong>
-            <ul>
-            <li><a href="/examples/page-mw"><i></i>Page.js Middleware</a></li>
-            
-            </ul>
-            <hr />
-          </div>
-        </div>
-        <div class="col-sm-8">
+        <div class="col-sm-12">
           <div class="text-content js-main-container">
-            <h1 class="js-title">A/B Testing</h1>
+            <h1 class="js-title">Docs API</h1>
 
-            <h4 class="js-description">This page is used to test auth0-ab</h4>
+            <h4 class="js-description">This page is used to test docs-api</h4>
 
-            <pre class="js-code"></pre>
+            <button class="js-get">Get ?</button>
+            <button class="js-connections-request">Get 'connections'</button>
+            <button class="js-connections-request-social">Get 'connections/social'</button>
 
-            <div class="clearfix">
-              <div id="login-container1" style="float: left; width: 300px; height: 500px; margin-top: 20px;"></div>
-              <div id="login-container2" style="float: left; width: 300px; height: 500px; margin-top: 20px;"></div>
-            </div>
+            <pre class="js-result"></pre>
 
           </div>
         </div>
       </div>
     </div>
 
-    
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/docs-cli.js"></script>
+    <script>
+      (function() {
+        var docs = new Auth0Docs();
+
+        $('.js-get').click(function() {
+          var path = prompt('Enter a path to get');
+
+          if (!path) { return; }
+          
+          show(path);
+        });
+
+        $('.js-connections-request').click(function() {
+          show('connections');
+        });
+
+        $('.js-connections-request-social').click(function() {
+          show('connections/social')
+        });
+
+        $('.js-connections-request-social').click(function() {
+          show('connections/social')
+        });
+
+        function show(path) {
+          docs.get(path).then(function(result) {
+            $('.js-result').text(JSON.stringify(result, null, 2));
+          });
+        }
+      })();
+
+    </script>
   </body>
 </html>

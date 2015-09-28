@@ -1,8 +1,8 @@
-body{
+body {
 	font-family: "Helvetica Neue", "Lucida Grande", "Arial";
 }
 
-h1,h2,h3{
+h1, h2, h3 {
 	font-weight: 100;
 	font-family: "Helvetica Neue", "Lucida Grande", "Arial";
 }
@@ -12,19 +12,19 @@ h1,h2,h3{
 	cursor: pointer;
 }
 
-pre{
+pre {
 	border: 0;
 	padding: 20px;
 	font-size: 12px; 
 }
 
-li {
-	&.li-docs {
-		padding: 10px;
-	}
-	&.li-button {
-		padding: 15px;
-	}
+
+li.li-docs {
+	padding: 10px;
+}
+
+li.li-button {
+	padding: 15px;
 }
 
 header.site-header {
@@ -45,13 +45,13 @@ header.site-header nav .navbar-brand a img {
 
 	.sub-header ul.external-links{
 		float: left;
-		li {
-			margin-left: 0;
-			float: left;
-			margin-top: 20px;
-			margin-right: 20px;
-		}
+	}
 
+	.sub-header ul.external-links li {
+		margin-left: 0;
+		float: left;
+		margin-top: 20px;
+		margin-right: 20px;
 	}
 
 	.sidebar-box{
