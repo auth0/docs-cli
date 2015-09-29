@@ -21,7 +21,7 @@
     "bluebird": "^2.9.34",
     "lodash": "^3.10.0",
     "superagent": "^1.4.0",
-    "superagent-cache": "git://github.com/daf-spr/superagent-cache.git#fix/error-callback-issue"
+    "superagent-cache": "^1.0.3"
   },
   "devDependencies": {
     "browserify": "^8.1.1",

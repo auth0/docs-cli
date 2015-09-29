@@ -2,6 +2,7 @@ var expect = require('chai').expect;
 var _ = require('lodash');
 
 describe('Loading the library', function() {
+  mocha.globals(['Auth0Docs']);
 
   describe('when AMD is not available', function() {
 
