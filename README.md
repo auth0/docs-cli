@@ -39,7 +39,8 @@ docs-cli-1.3.7.min.js
   });
 ```
 
-### Example 1: Setting a custom cache library (see https://github.com/jpodwys/cache-service)
+### Example 1: Setting a custom cache library 
+(see https://github.com/jpodwys/cache-service)
 
 ```
   var myAwsomeCache = ...
