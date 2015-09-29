@@ -1,6 +1,6 @@
 {
   "name": "auth0-docs",
-  "version": "1.0.1",
+  "version": "0.1.0",
   "description": "Auth0 Docs",
   "main": "./index.js",
   "private": true,
