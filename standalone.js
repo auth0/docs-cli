@@ -19,7 +19,7 @@ global.define = old_define;
 
 // use amd or just throught to window object.
 if (typeof global.define == 'function' && global.define.amd) {
-  global.define('auth0-ab', function () { return Auth0Docs; });
+  global.define('auth0-docs', function () { return Auth0Docs; });
 } else if (global) {
   global.Auth0Docs = Auth0Docs;
 }

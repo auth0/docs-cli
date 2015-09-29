@@ -48,6 +48,7 @@
             <button class="js-get">Get ?</button>
             <button class="js-connections-request">Get 'connections'</button>
             <button class="js-connections-request-social">Get 'connections/social'</button>
+            <button class="js-non-valid">Get NON VALID</button>
 
             <pre class="js-result"></pre>
 
@@ -66,7 +67,7 @@
           var path = prompt('Enter a path to get');
 
           if (!path) { return; }
-          
+
           show(path);
         });
 
@@ -80,6 +81,12 @@
 
         $('.js-connections-request-social').click(function() {
           show('connections/social')
+        });
+
+        $('.js-non-valid').click(function() {
+          docs.get('non-valid').catch(function(result) {
+            $('.js-result').text('Promise rejected!');
+          });
         });
 
         function show(path) {

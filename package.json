@@ -1,7 +1,7 @@
 {
-  "name": "auth0-ab",
+  "name": "auth0-docs",
   "version": "1.0.1",
-  "description": "Auth0 A/B Testing",
+  "description": "Auth0 Docs",
   "main": "./index.js",
   "private": true,
   "keywords": [
@@ -21,7 +21,7 @@
     "bluebird": "^2.9.34",
     "lodash": "^3.10.0",
     "superagent": "^1.4.0",
-    "superagent-cache": "^1.0.2"
+    "superagent-cache": "git://github.com/daf-spr/superagent-cache.git#fix/error-callback-issue"
   },
   "devDependencies": {
     "browserify": "^8.1.1",
@@ -45,7 +45,7 @@
     "packageify": "^0.2.0",
     "phantomjs": "^1.9.7-15",
     "rimraf": "~2.2.2",
-    "sinon": "^1.16.0",
+    "sinon": "^1.17.1",
     "through": "^2.3.8",
     "uglify-js": "~2.4.15",
     "unreleased": "^0.0.5",
