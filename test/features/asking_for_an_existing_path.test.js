@@ -8,7 +8,7 @@ describe('Asking for an existing path', function() {
 
 	beforeEach(function() {
     this.docs = new Auth0Docs({
-      baseURL: 'http://locahost:9999/meta'
+      baseURL: 'http://locahost:9999'
     });
 
     this.docs._fetcher.request = superagentFake(null, { body: [{ hash: 'unicorn' }] });

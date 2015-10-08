@@ -8,6 +8,12 @@ module.exports = function(err, response) {
     },
     end: function(cb) {
       cb(err, response);
+    },
+    once: function() {
+      return this;
+    },
+    set: function() {
+      return this;
     }
   };
 };

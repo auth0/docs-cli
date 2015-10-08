@@ -7,7 +7,7 @@ describe('Asking for a non existing path', function() {
 
   beforeEach(function() {
     this.docs = new Auth0Docs({
-      baseURL: 'http://localhost:9999/meta'
+      baseURL: 'http://localhost:9999'
     });
 
     this.docs._fetcher.request = superagentFake({ error: 'error' });
