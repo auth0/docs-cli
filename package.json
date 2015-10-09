@@ -1,7 +1,7 @@
 {
-  "name": "auth0-docs",
+  "name": "auth0-docs-cli",
   "version": "0.1.0",
-  "description": "Auth0 Docs",
+  "description": "Auth0 Docs Cli",
   "main": "./index.js",
   "private": true,
   "keywords": [
