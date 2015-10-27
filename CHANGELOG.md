@@ -1,3 +1,12 @@
+## [0.4.0] - 2015-10-27
+
+### Fixed
+
+- [] Merge pull request #3 from auth0/support-full-urls (`DAF`)
+  https://github.com/auth0/docs-cli/commit/8d7cd6214b724b866fca3a02f06f3267ad4f98d2
+- [] Add support to use full-url to fetch content (`Damian Fortuna`)
+  https://github.com/auth0/docs-cli/commit/10cf407c7c73c6a13aaeac10618a3eabe4dd3af1
+
 ## [0.3.0] - 2015-10-09
 
 ### Fixed
