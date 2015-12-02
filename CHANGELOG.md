@@ -1,3 +1,10 @@
+## [0.4.1] - 2015-10-27
+
+### Fixed
+
+- [] We had some issues because the dependencies were not pinned to the exact version (`Damian Fortuna`)
+  https://github.com/auth0/docs-cli/commit/dd4046bb4815c9538e02e8814ce8ec622ab3d849
+
 ## [0.4.0] - 2015-10-27
 
 ### Fixed
