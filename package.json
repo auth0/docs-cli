@@ -1,6 +1,6 @@
 {
   "name": "auth0-docs-cli",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Auth0 Docs Cli",
   "main": "./index.js",
   "private": true,
@@ -18,10 +18,10 @@
   "author": "Damián Andrés Fortuna - DAF (damian.andres.fortuna@gmail.com)",
   "license": "MIT",
   "dependencies": {
-    "bluebird": "^2.9.34",
-    "lodash": "^3.10.0",
-    "superagent": "^1.4.0",
-    "superagent-cache": "^1.0.3"
+    "bluebird": "2.9.34",
+    "lodash": "3.10.0",
+    "superagent": "1.4.0",
+    "superagent-cache": "1.0.3"
   },
   "devDependencies": {
     "browserify": "^8.1.1",
