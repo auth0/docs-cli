@@ -11,7 +11,7 @@ To install the dependencies, execute:
 
 ## Usage (local)
 To build and run the library locally, you can run
-`npm run dev`, that will let you include the library from http://localhost:9999/docs-cli.js, there is an small demo to test the library in http://localhost:9999/
+`npm run dev`, that will let you include the library from http://localhost:9999/docs-cli.js, there is a small demo to test the library in http://localhost:9999/
 
 ## Usage (deploy)
 To use it, you have to include the script which has been built, it is built with major, minor and fix versions to be able to granularly specify versioning. You can include either the complete or minified version.
